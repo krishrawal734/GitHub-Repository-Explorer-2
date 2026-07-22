@@ -5,7 +5,7 @@ import { persistReducer, persistStore } from "redux-persist";
 import repoReducer from "./slices/repoSlice";
 import wishlistReducer from "./slices/wishlistSlice";
 
-import { createPersistStorage } from "persistStorage";
+import { createPersistStorage } from "./persistStorage";
 
 const storage = createPersistStorage();
 
