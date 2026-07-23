@@ -21,6 +21,8 @@ const DetailPage = () => {
 
   useEffect(() => {
     if (fullName) {
+
+      
       dispatch(getRepoDetail(fullName));
     }
   }, [dispatch, fullName]);

@@ -24,6 +24,9 @@ const HomePage = () => {
   const debouncedValue = useDebounce(search);
 
   useEffect(() => {
+
+
+    
     if (debouncedValue.trim()) {
       dispatch(
         searchRepos({
