@@ -13,6 +13,7 @@ const initialState: WishlistState = {
 const wishlistSlice = createSlice({
   name: "wishlist",
 
+  
   initialState,
 
   reducers: {
@@ -41,6 +42,7 @@ const wishlistSlice = createSlice({
     },
   },
 });
+
 
 export const {
   addToWishlist,
