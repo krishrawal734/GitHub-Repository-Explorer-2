@@ -4,6 +4,7 @@ import type {
   SearchResponse,
 } from "../types/github";
 
+
 export const searchRepos = async (
   query: string,
   page: number = 1
@@ -21,6 +22,7 @@ export const searchRepos = async (
 
   return response.data;
 };
+
 
 export const getRepoDetail = async (
   fullName: string
