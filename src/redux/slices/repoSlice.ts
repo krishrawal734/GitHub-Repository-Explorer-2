@@ -24,6 +24,7 @@ export const searchRepos = createAsyncThunk(
     } catch (error: unknown) {
       return rejectWithValue(
         (error as { response?: { data?: { message?: string } } }).response?.data?.message || "Failed to fetch repositories.",
+        
       );
     }
   },
@@ -32,6 +33,7 @@ export const searchRepos = createAsyncThunk(
 export const getRepoDetail = createAsyncThunk(
   "repo/getRepoDetail",
   async (fullName: string, { rejectWithValue }) => {
+
     try {
       const data = await getRepositoryDetail(fullName);
 

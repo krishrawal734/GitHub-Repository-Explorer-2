@@ -8,4 +8,4 @@ const Spinner = React.memo(() => {
   );
 });
 
-export default Spinner;
+export default Spinner;                            

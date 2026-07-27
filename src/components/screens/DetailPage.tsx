@@ -38,7 +38,7 @@ const DetailPage = () => {
   return (
     <DetailTemplate>
       {selectedRepo && (
-        <div className="rounded-xl bg-white p-6 shadow-md">
+        <div className="rounded-xl bg-white p-6 shadow-md ">
           <img
             src={selectedRepo.owner.avatar_url}
             alt={selectedRepo.name}
