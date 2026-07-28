@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 const axiosInstance = axios.create({
   baseURL: "https://api.github.com",
   timeout: 10000,
-  headers: {
+  headers: { 
     Accept: "application/vnd.github.v3+json",
   },
 });

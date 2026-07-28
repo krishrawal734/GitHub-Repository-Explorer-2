@@ -1,4 +1,5 @@
 import React from "react";
+import AppLayout from "./AppLayout";
 
 interface Props {
   children: React.ReactNode;
@@ -6,11 +7,9 @@ interface Props {
 
 const DetailTemplate = ({ children }: Props) => {
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <div className="mx-auto max-w-4xl">
-        {children}
-      </div>
-    </div>
+    <AppLayout backLink={{ to: "/", label: "← Back to search" }}>
+      {children}
+    </AppLayout>
   );
 };
 

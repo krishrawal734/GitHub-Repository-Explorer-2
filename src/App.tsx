@@ -10,6 +10,8 @@ const Home = lazy(() => import("./pages/Home"));
 
 const Detail = lazy(() => import("./pages/Detail"));
 
+const Wishlist = lazy(() => import("./pages/Wishlist"));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -17,7 +19,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
 
-          <Route path="/detail/:fullName" element={<Detail />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+
+          <Route path="/detail/:owner/:repo" element={<Detail />} />
         </Routes>
       </Suspense>
     </ErrorBoundary>

@@ -74,6 +74,7 @@ const repoSlice = createSlice({
         state.loading = false;
         state.items = action.payload.items;
         state.totalCount = action.payload.total_count;
+        state.page = action.meta.arg.page ?? 1;
       })
 
       .addCase(searchRepos.rejected, (state, action) => {

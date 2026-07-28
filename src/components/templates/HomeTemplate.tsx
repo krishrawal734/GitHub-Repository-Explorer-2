@@ -1,23 +1,16 @@
 import React from "react";
+import AppLayout from "./AppLayout";
 
 interface Props {
   children: React.ReactNode;
+  backLink?: {
+    to: string;
+    label: string;
+  };
 }
 
-const HomeTemplate = ({ children }: Props) => {
-  return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <div className="mx-auto max-w-6xl">
-
-        <h1 className="mb-8 text-center text-4xl font-bold">
-          Github Repository Explorer
-        </h1>
-
-        {children}
-
-      </div>
-    </div>
-  );
+const HomeTemplate = ({ children, backLink }: Props) => {
+  return <AppLayout backLink={backLink}>{children}</AppLayout>;
 };
 
 export default HomeTemplate;

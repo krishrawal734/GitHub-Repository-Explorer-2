@@ -1,5 +1,6 @@
+import { FiGitBranch, FiStar } from "react-icons/fi";
+
 import Badge from "../atoms/Badge";
-import StarIcon from "../atoms/StarIcon";
 
 interface Props {
   stars: number;
@@ -7,17 +8,22 @@ interface Props {
   language: string;
 }
 
+const formatCount = (count: number) => count.toLocaleString();
+
 const RepoStats = ({ stars, forks, language }: Props) => {
   return (
-    <div className="flex flex-wrap gap-3 mt-3">
-      <div className="flex items-center gap-1">
-        <StarIcon />
-        <span>{stars}</span>
+    <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-500">
+      <div className="flex items-center gap-1.5">
+        <FiStar className="h-4 w-4" />
+        <span>{formatCount(stars)}</span>
       </div>
 
-      <Badge text={`Forks : ${forks}`} />
+      <div className="flex items-center gap-1.5">
+        <FiGitBranch className="h-4 w-4" />
+        <span>{formatCount(forks)}</span>
+      </div>
 
-      <Badge text={language || "Unknown"} />
+      {language && <Badge text={language} />}
     </div>
   );
 };
