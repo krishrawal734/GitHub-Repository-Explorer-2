@@ -25,7 +25,7 @@ const WishlistButton = ({ repo, variant = "card" }: Props) => {
     event.preventDefault();
     event.stopPropagation();
 
-    if (isWishlisted) {
+    if (  isWishlisted) {
       dispatch(removeFromWishlist(repo.id));
     } else {
       dispatch(addToWishlist(repo));
